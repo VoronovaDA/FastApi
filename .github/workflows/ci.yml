@@ -30,7 +30,7 @@ jobs:
 
       - name: Запускаем тест
         run: |
-          pytest tests/test.py
+          pytest tests/tests.py
 
       - name: Запускаем Pylint
         run: |
