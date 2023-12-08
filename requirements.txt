@@ -1,0 +1,8 @@
+fastapi
+httpx
+pydantic
+uvicorn
+pytest
+mypy
+pylint
+black
