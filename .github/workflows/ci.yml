@@ -11,27 +11,27 @@ jobs:
     env:
       MAIN_URL: ${{ vars.MAIN_URL }}
 
-      steps:
-        - name: Проверяем репозиторий на наличие изменений
-          uses: actions/checkout@v3
+    steps:
+      - name: Проверяем репозиторий на наличие изменений
+        uses: actions/checkout@v3
 
-        - name: Установка python и создание окружения
-          uses: actions/setup-python@v3
-          with:
-            python-version: 3.11.5
+      - name: Установка python и создание окружения
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11.5
 
-        - name: Обновить pip
-          run: |
-              python -m pip install --upgrade pip
+      - name: Обновить pip
+        run: |
+            python -m pip install --upgrade pip
 
-        - name: Установить зависимости
-          run: |
-              python -m pip install -r requirements.txt
+      - name: Установить зависимости
+        run: |
+            python -m pip install -r requirements.txt
 
-        - name: Запускаем тест
-          run: |
-            pytest tests/test.py
+      - name: Запускаем тест
+        run: |
+          pytest tests/test.py
 
-        - name: Запускаем Pylint
-          run: |
-            pylint ./app 
+      - name: Запускаем Pylint
+        run: |
+          pylint ./app 

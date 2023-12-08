@@ -12,7 +12,7 @@ class Item(BaseModel):
     price: float
 
 
-@app.get(settings.main_url)
+@app.get(settings.MAIN_URL)
 def read_root():
     """ get endpoint """
     return {"Hello": "World"}

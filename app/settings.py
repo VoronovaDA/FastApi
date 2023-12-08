@@ -4,7 +4,7 @@ from pydantic.v1 import BaseSettings
 
 class Settings(BaseSettings):
     """ settings class """
-    main_url: str
+    MAIN_URL: str
 
 
-settings = Settings(main_url="/")
+settings = Settings(MAIN_URL="/")
